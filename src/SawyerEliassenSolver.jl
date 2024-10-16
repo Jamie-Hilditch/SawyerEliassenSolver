@@ -24,7 +24,7 @@ include("Output/Output.jl")
 """Initialise the SawyerEliassenSolver module."""
 function __init__()
     nthreads = Threads.nthreads()
-    FFTW.set_num_threads(nthreads)
+    FFTW.set_num_threads(4nthreads)
     if nthreads > 1
         @info "SawyerEliassenSolver will use $nthreads threads for FFTW"
     end
