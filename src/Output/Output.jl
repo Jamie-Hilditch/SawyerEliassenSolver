@@ -28,13 +28,14 @@ export OutputVariable,
     write_Bx!,
     write_Bz!,
     write_background_flow!,
-    integrate_background_gradients,
+    integrate_periodic_gradients,
     write_background_buoyancy!,
     write_background_velocity!
 
 include("output_variable.jl")
 include("output_writer.jl")
-include("OutputVariables/OutputVariables.jl")
+include("integrate_gradients.jl")
 include("constant_output_variable.jl")
+include("OutputVariables/OutputVariables.jl")
 
 end  # module Output
